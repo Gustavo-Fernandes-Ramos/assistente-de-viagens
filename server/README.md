@@ -4,7 +4,7 @@
 
 ### Autenticar viajante
 
-- fornecer tela inicial
+- fornecer tela inicial e todas as outras
 
 - autenticar token do viajante
 
