@@ -1,5 +1,7 @@
 # Servidor
 
+Requisitos do servidor da aplicação **Assistente de Viagens**
+
 ## Requisitos
 
 ### Autenticar viajante
