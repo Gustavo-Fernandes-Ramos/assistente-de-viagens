@@ -4,55 +4,40 @@ Requisitos do servidor da aplicação **Assistente de Viagens**
 
 ## Requisitos
 
-- cancelar qualquer operação em andamento a qualquer momento, para determinado usuário com token
-
 ### Avaliação de atrações para aprendizado de máquina
 
 - fornecer tela de avaliação
-
-- fornecer 5 locais de diferentes categorias para servirem de primeira avaliação para um viajante
+- fornecer locais de diferentes categorias para servirem de primeira avaliação para um viajante
+- receber a avaliação das atrações e com base nelas definir as features iniciais do viajante
 
 ### Autenticar viajante
 
-- fornecer tela inicial e todas as outras
-
 - autenticar token do viajante
-
 - criar novo token de autenticação para o viajante
-
 - deletar token do viajante após longo período de inatividade
 
 ### Montar roteiro de viagem
 
-- fornecer tela formulário + Recomendação
+- fornecer tela formulário + recomendação
+- fornecer recomendações de locais com base na predição do knn tendo as features do viajante como parâmetro
+- receber informações básicas + recomendações aprovadas pelo viajante
 
-- receber informações básicas + recomendações que foram aprovadas pelo viajante
-
-- fornecer tela detalhes
-
-- receber a avaliação positiva/negativa das 5 atrações e com base nelas definir as características iniciais do viajante
-
-
-- fornecer tela recomendação
-
-- receber a avaliação negativa das n atrações e com base nelas alterar as características do viajante
-
-- receber a avaliação positiva das n atrações e com base nelas alterar as características do viajante
-
-- receber atrações com as quais o roteiro deve ser montado
-
-### Visualizar roteiros de viagem criados anteriormente
-
+- montar roteiro com base nas informações + recomendações
 - fornecer tela roteiro
+- fornecer roteiro de viagem personalizado
 
-- fornecer roteiro com todas as informações pertinentes
+### Armazenar roteiros de viagem criados anteriormente para serem visualizados pelo viajante
 
-- salvar roteiro no banco de dados, associado ao token do viajante
+- salvar roteiro de viagem no banco de dados, associado ao token do viajante
+- fornecer tela lista roteiros salvos
+- fornecer informações básicas de todos os roteiros salvos do viajante
 
-
-- fornecer tela roteiros salvos
-
-- fornecer informações básicas dos roteiros salvos
-
+- fornecer tela roteiro salvo
 - receber solicitação para remover roteiro
+
+### Geral
+
+- fornecer tela inicial
+- fornecer tela detalhes
+- cancelar qualquer operação em andamento a qualquer momento, para determinado usuário com token
 
