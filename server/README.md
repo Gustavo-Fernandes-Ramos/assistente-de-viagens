@@ -4,6 +4,14 @@ Requisitos do servidor da aplicação **Assistente de Viagens**
 
 ## Requisitos
 
+- cancelar qualquer operação em andamento a qualquer momento, para determinado usuário com token
+
+### Avaliação de atrações para aprendizado de máquina
+
+- fornecer tela de avaliação
+
+- fornecer 5 locais de diferentes categorias para servirem de primeira avaliação para um viajante
+
 ### Autenticar viajante
 
 - fornecer tela inicial e todas as outras
@@ -16,12 +24,9 @@ Requisitos do servidor da aplicação **Assistente de Viagens**
 
 ### Montar roteiro de viagem
 
-- fornecer tela formulário viagem
+- fornecer tela formulário + Recomendação
 
-- receber informações básicas sobre a viagem
-
-- cancelar qualquer operação em andamento a qualquer momento, para determinado usuário com token
-
+- receber informações básicas + recomendações que foram aprovadas pelo viajante
 
 - fornecer tela detalhes
 
@@ -51,8 +56,3 @@ Requisitos do servidor da aplicação **Assistente de Viagens**
 
 - receber solicitação para remover roteiro
 
-### Avaliação de atrações para aprendizado de máquina
-
-- fornecer tela de avaliação
-
-- fornecer 5 locais de diferentes categorias para servirem de primeira avaliação para um viajante
