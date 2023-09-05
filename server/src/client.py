@@ -2,7 +2,7 @@ import http.client
 
 conn = http.client.HTTPConnection("localhost", 8080)
 
-conn.request("GET", "/index.html")
+conn.request("GET", "/login")
 
 response = conn.getresponse()
 
