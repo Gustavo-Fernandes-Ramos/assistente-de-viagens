@@ -1,6 +1,9 @@
 # Servidor
 
-Requisitos do servidor da aplicação **Assistente de Viagens**
+servidor da aplicação **Assistente de Viagens**
+
+## Observações
+Devido a natureza do protocolo HTTP, nem o cliente nem o navegador podem reter informações entre diferentes solicitações nas páginas da web.
 
 ## Requisitos
 
