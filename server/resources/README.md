@@ -14,7 +14,9 @@ Obter tela inicial
 
 ### URI
 
+```
 http://localhost:8080/resources/index.html
+```
 
 ### Request
 
