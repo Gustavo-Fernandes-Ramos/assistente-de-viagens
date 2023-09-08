@@ -18,19 +18,14 @@ http://localhost:8080/resources/index.html
 
 ### Request
 
+```
 GET /resources/index.html HTTP/1.0
-
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
-
 Host: www.tutorialspoint.com
-
 Accept-Language: pt-br
-
 Accept-Encoding: gzip, deflate
-
 Connection: Keep-Alive
 
-```
 {
   "firstName": "John",
   "lastName": "Smith",
