@@ -33,7 +33,7 @@ Connection: Keep-Alive
 
 ### Responses
 
-#### OK
+#### 200 OK
 ```
 HTTP/1.0 200 OK
 Date: Mon, 27 Jul 2009 12:28:53 GMT
@@ -45,7 +45,7 @@ Connection: Closed
 
 [arquivo html da tela inicial]
 ```
-#### Not Found
+#### 404 Not Found
 ```
 HTTP/1.0 404 Not Found
 Date: Sun, 18 Oct 2012 10:36:20 GMT
@@ -74,7 +74,7 @@ Authorization: Bearer dXNlcm5hbWU6cGFzc3dvcmQ=
 
 ### Responses
 
-#### OK
+#### 200 OK
 ```
 HTTP/1.0 200 OK
 Date: Mon, 27 Jul 2009 12:28:53 GMT
@@ -108,8 +108,14 @@ Set-Cookie: token=dXNlcm5hbWU6cGFzc3dvcmQ=; expires=Fri, 31 Dec 2024 23:59:59 GM
 obter atrações para avaliação
 
 ### URI
-
+```
 http://localhost:5000/avaliation?credentials=true
+```
+### Request
+
+### Responses
+
+###
 
 ### Request
 ```
@@ -130,4 +136,4 @@ Content-Length: 98
   "age": 25
 }
 ```
-### Response
+### Responses
