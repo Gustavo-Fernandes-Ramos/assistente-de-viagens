@@ -1,5 +1,37 @@
 # API do Servidor
 
+## Endpoints
+```
+http://localhost:5000/home
+http://localhost:5000/home?op=auth
+
+http://localhost:5000/avaliation
+http://localhost:5000/avaliation?op=get-places-to-rank&qtd=5
+http://localhost:5000/avaliation?op=send-ranked-places&qtd=5
+
+http://localhost:5000/details
+http://localhost:5000/details?op=get-place-details
+
+http://localhost:5000/formulary
+http://localhost:5000/formulary?op=get-travel-form-config
+http://localhost:5000/formulary?op=send-travel-form
+
+http://localhost:5000/recommendation
+http://localhost:5000/recommendation?op=get-places-recommendation
+http://localhost:5000/recommendation?op=replace-place-recommendation
+http://localhost:5000/recommendation?op=send-approved-places
+
+http://localhost:5000/itinerary
+http://localhost:5000/itinerary?op=get-itinerary
+http://localhost:5000/itinerary?op=save-itinerary
+
+http://localhost:5000/saved-itinerary-list
+http://localhost:5000/saved-itinerary-list?op=get-itinerary-list
+
+http://localhost:5000/saved-itinerary
+http://localhost:5000/saved-itinerary?op=get-itinerary
+```
+
 ## Tarefa
 
 Obter telas da aplicação (html, css, js)
@@ -53,11 +85,12 @@ Connection: Closed
 ```
 
 ## Tarefa
+
 Autenticar viajante
 
 ### URI
 ```
-http://localhost:5000/home?op=auth&credentials=true
+http://localhost:5000/home?auth=true
 ```
 
 ### Request
@@ -106,7 +139,7 @@ obter atrações para avaliação
 
 ### URI
 ```
-http://localhost:5000/avaliation?credentials=true
+http://localhost:5000/avaliation?has-auth=true&op=get-places&qtd=5
 ```
 ### Request
 
