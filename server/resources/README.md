@@ -1,6 +1,6 @@
 # API do Servidor
 
-## Endpoints
+## Endpoint
 ```
 http://localhost:5000/home
 http://localhost:5000/home?op=auth

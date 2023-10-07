@@ -1,0 +1,24 @@
+{
+    "credential": {
+        "token": "MTIzNDU2Nzg="
+    },
+    "metadata":{
+
+    },
+    "itinerary-list": {
+        "itinerary":{
+            "creation-date": "2023-09-24T15:30:00Z",
+            "attraction-list": [
+                {
+                    "metadata":{
+                        "order": 1,
+                        "visit-date": "2023-09-24T15:30:00Z"
+                    },
+                    "attraction":{
+                                
+                    }
+                }
+            ]
+        }
+    }
+}
