@@ -1,179 +1,78 @@
 # API do Servidor
 
-## Endpoint
+## Endpoints
+
+http://localhost:8000/criar_auth
 ```
-http://localhost:5000/home
-http://localhost:5000/home?op=auth
-
-http://localhost:5000/avaliation
-http://localhost:5000/avaliation?op=get-places-to-rank&qtd=5
-http://localhost:5000/avaliation?op=send-ranked-places&qtd=5
-
-http://localhost:5000/details
-http://localhost:5000/details?op=get-place-details
-
-http://localhost:5000/formulary
-http://localhost:5000/formulary?op=get-travel-form-config
-http://localhost:5000/formulary?op=send-travel-form
-
-http://localhost:5000/recommendation
-http://localhost:5000/recommendation?op=get-places-recommendation
-http://localhost:5000/recommendation?op=replace-place-recommendation
-http://localhost:5000/recommendation?op=send-approved-places
-
-http://localhost:5000/itinerary
-http://localhost:5000/itinerary?op=get-itinerary
-http://localhost:5000/itinerary?op=save-itinerary
-
-http://localhost:5000/saved-itinerary-list
-http://localhost:5000/saved-itinerary-list?op=get-itinerary-list
-
-http://localhost:5000/saved-itinerary
-http://localhost:5000/saved-itinerary?op=get-itinerary
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Npc3RlbnRlX3ZpYWdlbnMiLCJhdWQiOiJjbGllbnQiLCJzdWIiOjExLCJqdGkiOiJhZGJkNzc3NS03ZGU4LTQxNDAtOWU3Yy1kNmZmODIyMGE2YzMiLCJpYXQiOjE2OTY2NTk2MTEsIm5iZiI6MTY5NjY1OTYxMSwiZXhwIjoxODU0MzM5NjExfQ.ePyGfCl59_zkD1CAZqqkR9C19ihN7X4_gYySughU5C1UxTtLars0ckpruSTTMCFAUVfOmnH1pTVaF_IFfQgw8-Tg6AGE2rbnd_Nze2fbwv6DvvH9iJzZZEwg2lrOmpAGVp31pKUQrFTnUET_vZYaqzxlD814Pw2zERVNb7eye9kV2d2Y2s4OJiV_I02RsSJThiLqxoX9NnFaFX4otCCI61T_CkxnfTgX2OxbBWts7Bsx84W_VVxG_t5nCRrm26cLqv6QwcITKI15lDbqWHbkFaUNBdM-VQ8kE-CbmsSgjsRFxy1NUGpzQJCRDCaaDaIUzzDBO14qtTOZU1GQnh16vw",
+  "token_type": "Bearer",
+  "expires_in": 1854339611,
+  "scope": "client"
+}
 ```
 
-## Tarefa
-
-Obter telas da aplicação (html, css, js)
-
-### URIs
+http://localhost:8000/...
 ```
-http://localhost:5000/home
-http://localhost:5000/avaliation
-http://localhost:5000/details
-http://localhost:5000/formulary
-http://localhost:5000/recommendation
-http://localhost:5000/itinerary
-http://localhost:5000/saved-itinerary-list
-http://localhost:5000/saved-itinerary
+Authorization: Bearer "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Npc3RlbnRlX3ZpYWdlbnMiLCJhdWQiOiJjbGllbnQiLCJzdWIiOjExLCJqdGkiOiJhZGJkNzc3NS03ZGU4LTQxNDAtOWU3Yy1kNmZmODIyMGE2YzMiLCJpYXQiOjE2OTY2NTk2MTEsIm5iZiI6MTY5NjY1OTYxMSwiZXhwIjoxODU0MzM5NjExfQ.ePyGfCl59_zkD1CAZqqkR9C19ihN7X4_gYySughU5C1UxTtLars0ckpruSTTMCFAUVfOmnH1pTVaF_IFfQgw8-Tg6AGE2rbnd_Nze2fbwv6DvvH9iJzZZEwg2lrOmpAGVp31pKUQrFTnUET_vZYaqzxlD814Pw2zERVNb7eye9kV2d2Y2s4OJiV_I02RsSJThiLqxoX9NnFaFX4otCCI61T_CkxnfTgX2OxbBWts7Bsx84W_VVxG_t5nCRrm26cLqv6QwcITKI15lDbqWHbkFaUNBdM-VQ8kE-CbmsSgjsRFxy1NUGpzQJCRDCaaDaIUzzDBO14qtTOZU1GQnh16vw"
 ```
 
-### Request
+http://localhost:8000/palavras_chave
 ```
-GET /home HTTP/1.1
-User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
-Host: localhost:5000
-Accept: text/html
-Accept-Charset: utf-8
-Accept-Language: pt-br
-Accept-Encoding: gzip, deflate
-Connection: Keep-Alive
+GET /palavras_chave HTTP/1.1
+Authorization: Bearer dXNlcm5hbWU6cGFzc3dvcmQ
+{
+  destinos: ["São Paulo, SP"]
+  palavras_chave: ["passeio a pé", "outdoor", "natureza"]
+}
 ```
 
-### Responses
+http://localhost:8000/palavras_chave
+```
+POST /palavras_chave HTTP/1.1
+Authorization: Bearer dXNlcm5hbWU6cGFzc3dvcmQ
+{
+  "destino": "São Paulo, SP",
+  "data_inicio": 1854339220,
+  "data_fim": 1854339220,
+  "palavras_chave": ["passeio a pé", "outdoor", "natureza"]
+}
+```
+
+http://localhost:8000/roteiros
+```
+GET /roteiros HTTP/1.1
+Authorization: Bearer dXNlcm5hbWU6cGFzc3dvcmQ
+{
+  "roteiros": ["roteiro1":{}, "roteiro2":{}, "roteiro3":{}]
+}
+```
+
+http://localhost:8000/roteiros/{id}
+```
+GET /roteiros HTTP/1.1
+Authorization: Bearer dXNlcm5hbWU6cGFzc3dvcmQ
+{
+  "roteiro": [{}, {}, {}]
+}
+```
 
 #### 200 OK
 ```
 HTTP/1.0 200 OK
-Date: Mon, 27 Jul 2009 12:28:53 GMT
-Server: Apache/2.2.14 (Win32)
-Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
-Content-Length: 988
-Content-Type: text/html; charset=utf-8
-Connection: Closed
-
-[arquivo html da tela inicial]
-```
-#### 404 Not Found
-```
-HTTP/1.0 404 Not Found
-Date: Sun, 18 Oct 2012 10:36:20 GMT
-Server: Apache/2.2.14 (Win32)
-Content-Length: 0
-Content-Type: text/html; charset=utf-8
-Connection: Closed
-```
-
-## Tarefa
-
-Autenticar viajante
-
-### URI
-```
-http://localhost:5000/home?auth=true
-```
-
-### Request
-```
-GET /home?op=auth HTTP/1.1
-User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
-Host: localhost:5000
-Connection: Keep-Alive
-Authorization: Bearer dXNlcm5hbWU6cGFzc3dvcmQ=
-```
-
-### Responses
-
-#### 200 OK
-```
-HTTP/1.0 200 OK
-Date: Mon, 27 Jul 2009 12:28:53 GMT
-Server: Apache/2.2.14 (Win32)
-Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
-Content-Length: 0
-Content-Type: text/html; charset=utf-8
-Connection: Closed
-```
-#### 401 Unauthorized
-```
-HTTP/1.0 401 Unauthorized
-Date: Sun, 18 Oct 2012 10:36:20 GMT
-Server: Apache/2.2.14 (Win32)
-Content-Length: 0
-Content-Type: text/html; charset=utf-8
-Connection: Closed
 ```
 #### 201 Created
 ```
 HTTP/1.0 201 Created
-Date: Sun, 18 Oct 2012 10:36:20 GMT
-Server: Apache/2.2.14 (Win32)
-Content-Length: 0
-Content-Type: text/html; charset=utf-8
-Connection: Closed
-Set-Cookie: token=dXNlcm5hbWU6cGFzc3dvcmQ=; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/; Domain=localhost:5000
 ```
-## Tarefa
-
-obter atrações para avaliação
-
-### URI
+#### 401 Unauthorized
 ```
-http://localhost:5000/avaliation?has-auth=true&op=get-places&qtd=5
+HTTP/1.0 401 Unauthorized
 ```
-### Request
-
-### Responses
-
-###
-
-### Request
+#### 404 Not Found
 ```
-POST /cgi-bin/process.cgi HTTP/1.0
-User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
-Host: localhost:5000
-Accept: application/json
-Accept-Charset: utf-8
-Accept-Language: pt-br
-Accept-Encoding: gzip, deflate
-Connection: Keep-Alive
-Content-Type: application/json
-Content-Length: 98
-
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
+HTTP/1.0 404 Not Found
 ```
-### Responses
-
-
-
-
-
-
-
 
 ### links
 
